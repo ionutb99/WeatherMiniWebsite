@@ -1,0 +1,185 @@
+/* #root {
+    width: 100vw;
+    height: 100vh;
+}
+
+#CardHeader {
+    width: 100vw;
+    height: 50%;
+    background-color: red;
+}
+
+#CardBody1 {
+    width: 100vw;
+    height: 25%;
+    background-color: blue;
+}
+#CardBody2 {
+    width: 100vw;
+    height: 25%;
+    background-color: brown;
+} */
+/* CSS for the Weather App */
+
+
+  html, body { 
+
+  /* background-image: url("https://unsplash.it/600/400?image=1043&blur"); */
+  /* background-size: cover; */
+  border-radius: 10px;
+  box-shadow: 25px 25px 40px 0px rgba(0,0,0,0.33);
+  color: #000000;
+  overflow: hidden;
+  /* position:fixed; */
+  /* max-width: 300px; */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+ 
+  }
+  
+  #root {
+    background-image: url("https://unsplash.it/600/400?image=1043&blur");
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 25px 25px 40px 0px rgba(0,0,0,0.33);
+    color: #000000;
+    overflow: hidden;
+    position:fixed;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #00ff22;
+  }
+  
+  input {
+    padding: 10px;
+    width: 100%;
+    border:#000000;
+    background: transparent;
+    background-color:rgba(208, 236, 162, 0.3);
+    border-radius: 10px;
+  }
+  
+  #CardHeader {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #CardHeader p {
+    margin: 5px 0;
+  }
+  
+  #CityName {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 5px;
+  }
+  
+  #TemperatureDisplay {
+    font-size: 72px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  #CardBodyMiddle,
+  #CardBodyBottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .temperatureByHour {
+    text-align: center;
+    padding-right: 10px;
+  }
+  .temperatureByDay {
+    text-align: center;
+  }
+  
+  .temperatureByHour strong,
+  .temperatureByDay strong {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .temperatureByHour strong {
+    color: #020101;
+  }
+  
+  #CardBodyBottom .temperatureByDay {
+    flex-basis: 30%;
+  }
+  
+  #CardBodyBottom .temperatureByDay strong {
+    color: #000000;
+  }
+  
+  #Container {
+    background-color: rgba(208, 236, 162, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  
+  .hidden {
+    display: none;
+  }
+  
+  ul {
+    margin-left: -30px;
+  }
+
+  .favoriteBtn {
+    margin-left: 10px;
+  }
+
+  .spinner {
+    display: none;
+    position:absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .spinner.visible {
+    display: block;
+  }
+  
+  .spinner:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: #333;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
